@@ -1,0 +1,7 @@
+<%= form_for @comic, url: "/comics/#{@comic.id}", html: { method: :patch } do |f| %>
+  <p>更新</p>
+  <p><%= f.text_field :name %></p>
+  <p><%= f.text_field :price %></p>
+  <p><%= f.text_field :author %></p>
+  <input type="submit" value="更新">
+<% end %>
