@@ -1,0 +1,20 @@
+<h1>詳細情報</h1>
+<h2><%= link_to "一覧画面へ", comics_path %></h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">登録番号</th>
+      <th scope="col">漫画名</th>
+      <th scope="col">値段</th>
+      <th scope="col">作者名</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><%= @comic.id %></th>
+      <td><%= @comic.name %></td>
+      <td><%= @comic.price %></td>
+      <td><%= @comic.author %></td>
+    </tr>
+  </tbody>
+</table>

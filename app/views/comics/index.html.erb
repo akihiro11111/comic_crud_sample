@@ -1,9 +1,9 @@
 <h1>一覧画面</h1>
-<h2><%= link_to "登録画面へ", "/comics/new" %></h2>
+<h2><%= link_to "登録画面へ", new_comic_path %></h2>
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">登録番号</th>
       <th scope="col">漫画名</th>
       <th scope="col">値段</th>
       <th scope="col">作者名</th>
@@ -12,12 +12,13 @@
 <% @comics.each do |comic| %>
   <tbody>
     <tr>
-      <th scope="row">1</th>
+      <th scope="row"><%= comic.id %></th>
       <td><%= comic.name %></td>
       <td><%= comic.price %></td>
       <td><%= comic.author %></td>
-      <td><%= link_to '削除', "/comics/#{comic.id}", method: :delete, data: {confirm: "削除しますか？"} %></td>
-      <td><%= link_to '編集', "/comics/#{comic.id}/edit", method: :get %></td>
+      <td><%= link_to '詳細', comic_path(comic.id) %></td>
+      <td><%= link_to '編集', edit_comic_path(comic.id), method: :get %></td>
+      <td><%= link_to '削除', comic_path(comic.id), method: :delete, data: {confirm: "削除しますか？"} %></td>
     </tr>
   </tbody>
 <% end %>

@@ -4,7 +4,7 @@
 
 CRUD処理の実装サンプル
 
-*resoucesを使わないCRUD処理
+*resoucesを使ったCRUD処理
 
 *Rails Best Practiceの導入
 
