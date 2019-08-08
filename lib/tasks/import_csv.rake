@@ -3,7 +3,7 @@ namespace :import_csv do
   desc "User CSVデータのインポート"
 
   task users: :environment do
-    User.users_data
+    ImportCsv.users_data
   end
 
 end
