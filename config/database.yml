@@ -15,9 +15,8 @@ development:
   encoding: utf8
   database: comic_crud_sample
   pool: 5
-  username: aki
-  password: aki1111
-  host: localhost
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
