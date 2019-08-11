@@ -11,7 +11,13 @@ class ComicsController < ApplicationController
   end
 
   def create
-    Comic.create(user_id: current_user.id, name: comic_params[:name], price: comic_params[:price], author: comic_params[:author])
+    Comic.create(
+      user_id: current_user.id,
+      name: comic_params[:name],
+      price: comic_params[:price],
+      author: comic_params[:author],
+      story: comic_params[:story]
+    )
     redirect_to :action => "index"
   end
 
@@ -40,7 +46,7 @@ class ComicsController < ApplicationController
   private
 
   def comic_params
-    params.require(:comic).permit(:name, :price, :author)
+    params.require(:comic).permit(:name, :price, :author, :story)
   end
 
 end
