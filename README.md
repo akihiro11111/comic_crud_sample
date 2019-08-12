@@ -11,3 +11,5 @@
 *Bootstrap導入
 
 *Rakeタスクの実装
+
+*deviseを用いたログイン機能の実装

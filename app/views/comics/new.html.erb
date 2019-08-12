@@ -1,8 +1,8 @@
 <%= form_for @comic, url: comics_path , html: { method: :post } do |f| %>
   <h1>登録画面</h1>
-  <h2><%= link_to "一覧画面へ", comics_path %></h2>
   <p>漫画名:<%= f.text_field :name %></p>
   <p>値段:<%= f.text_field :price %></p>
   <p>作者名:<%= f.text_field :author %></p>
+  <p>ストーリー:<%= f.text_field :story %></p>
   <input type="submit" value="登録">
 <% end %>
