@@ -21,10 +21,6 @@ class ComicsController < ApplicationController
     redirect_to :action => "index"
   end
 
-  def move_to_index
-    redirect_to action: :index unless user_signed_in?
-  end
-
   def show
     @comic = Comic.find(params[:id])
   end
@@ -44,6 +40,10 @@ class ComicsController < ApplicationController
   end
 
   private
+
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
+  end
 
   def comic_params
     params.require(:comic).permit(:name, :price, :author, :story)
