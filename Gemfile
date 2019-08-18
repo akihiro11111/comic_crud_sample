@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.1'
+ruby '2.5.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -33,7 +33,11 @@ gem 'jquery-rails'
 gem 'rails_best_practices'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+#管理者画面作成のgem
+gem 'activeadmin'
 gem 'devise'
+#日付日本語化
+gem 'rails-i18n'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
