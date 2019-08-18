@@ -16,6 +16,11 @@
         <td><%= comic.name %></td>
         <td><%= comic.price %></td>
         <td><%= comic.author %></td>
+        <td><%= link_to '詳細', comic_path(comic.id) %></td>
+        <% if current_user.admin? %>
+          <td><%= link_to '編集', edit_comic_path(comic.id), method: :get %></td>
+          <td><%= link_to '削除', comic_path(comic.id), method: :delete, data: {confirm: "削除しますか？"} %></td>
+        <% end %>
       </tr>
     </tbody>
   <% end %>
